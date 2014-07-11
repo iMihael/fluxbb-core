@@ -9,15 +9,15 @@
 	<!-- end meta tags --> 
 		
 	<!-- begin css -->
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/fluxbb/core/frontend/bootstrap.min.css') }}" /> 
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/fluxbb/core/frontend/style.css') }}" /> 
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/fluxbb/core/frontend/assets/css/entypo.css') }}" /> 
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/imihael/fluxbb-core/frontend/bootstrap.min.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/imihael/fluxbb-core/frontend/style.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('packages/imihael/fluxbb-core/frontend/assets/css/entypo.css') }}" />
 	<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Telex" rel="stylesheet" type="text/css"> 
 	<!-- end css -->
 		
 		
 	<!-- begin shortcut -->
-	<link rel="shortcut icon" href="{{ URL::asset('packages/fluxbb/core/img/favicon.ico') }}">
+	<link rel="shortcut icon" href="{{ URL::asset('packages/imihael/fluxbb-core/img/favicon.ico') }}">
 	<!-- end shortcut -->
 		
 	<!-- begin js -->
