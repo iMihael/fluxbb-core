@@ -13,6 +13,11 @@ class Base extends Model
 
     protected $errors = array();
 
+    public function __construct(array $attributes = array())
+    {
+        $this->table =  'fluxbb_' . $this->table;
+        parent::__construct($attributes);
+    }
 
     public function valid()
     {

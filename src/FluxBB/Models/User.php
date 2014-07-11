@@ -11,6 +11,8 @@ class User extends Base implements UserInterface
 {
     protected $table = 'users';
 
+    private static $currentUser = null;
+
     // TODO: Review
     protected $fillable = array(
         'username',
@@ -60,6 +62,15 @@ class User extends Base implements UserInterface
             }
 
             return $current;
+        }
+        else
+        {
+            if(is_null(self::$currentUser))
+            {
+                self::$currentUser = self::find(Auth::user()->id);
+            }
+
+            return self::$currentUser;
         }
 
         // We already have the logged in user's object
