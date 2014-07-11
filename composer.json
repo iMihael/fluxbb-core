@@ -1,5 +1,5 @@
 {
-	"name": "fluxbb/core",
+	"name": "imihael/fluxbb-core",
 	"type": "library",
 	"description": "The FluxBB forum core",
 	"keywords": ["forum", "laravel"],
