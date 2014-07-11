@@ -8,6 +8,7 @@ class ForumPerms extends Base
 {
     protected $table = 'forum_perms';
 
+    protected $fillable = ['group_id', 'forum_id', 'read_forum', 'post_replies', 'post_topics'];
 
     public function forum()
     {

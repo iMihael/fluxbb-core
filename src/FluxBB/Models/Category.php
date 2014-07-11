@@ -10,6 +10,13 @@ class Category extends Base
 
     protected $fillable = array('cat_name', 'disp_position');
 
+    protected $rules = [
+        'cat_name' => 'required',
+    ];
+
+    protected $messages = [
+        'cat_name.required' => 'Category name is required',
+    ];
 
     public function forums()
     {

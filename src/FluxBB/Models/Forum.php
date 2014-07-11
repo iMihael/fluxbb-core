@@ -9,8 +9,16 @@ class Forum extends Base
 {
     protected $table = 'forums';
 
-    protected $fillable = array('forum_name', 'forum_desc', 'disp_position');
+    protected $fillable = array('forum_name', 'forum_desc', 'disp_position', 'cat_id');
 
+    protected $rules = [
+        'forum_name' => 'required',
+        'cat_id' => 'required|exists:fluxbb_categories,id',
+    ];
+
+    protected $messages = [
+        'forum_name.required' => 'Forum name is required.',
+    ];
 
     public function topics()
     {
@@ -116,6 +124,20 @@ class Forum extends Base
             default:
                 return 'DESC';
         }
+    }
+
+    public function deleteForum()
+    {
+        $this->perms()->delete();
+        $this->subscription()->delete();
+        $this->subscriptions()->delete();
+        foreach($this->topics()->get() as $topic)
+        {
+            $topic->posts()->delete();
+            $topic->subscription()->delete();
+            $topic->delete();
+        }
+        $this->delete();
     }
 
     public function subscribe($subscribe = true)
